@@ -282,14 +282,29 @@
     offset: 100
   });
 
-  // Animación del navbar al hacer scroll
-  window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-      navbar.classList.add('scrolled', 'navbar-shrink');
+  // Control de visibilidad del navbar
+  let lastScrollTop = 0;
+  const navbar = document.querySelector('.navbar');
+  const scrollThreshold = 100; // Píxeles a scrollear antes de ocultar
+
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    // Ocultar/mostrar después del threshold
+    if (scrollTop > scrollThreshold) {
+      if (scrollTop > lastScrollTop) {
+        // Scroll hacia abajo
+        navbar.classList.add('navbar-hidden');
+      } else {
+        // Scroll hacia arriba
+        navbar.classList.remove('navbar-hidden');
+      }
     } else {
-      navbar.classList.remove('scrolled', 'navbar-shrink');
+      // Siempre mostrar en la parte superior
+      navbar.classList.remove('navbar-hidden');
     }
+    
+    lastScrollTop = scrollTop;
   });
 </script>
 

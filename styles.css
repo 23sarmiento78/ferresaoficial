@@ -15,19 +15,13 @@ main {
 }
 
 .navbar {
-  background-color: rgba(0, 0, 0, 0.9);
-  padding: 1rem 0;
-  transition: all 0.4s ease;
-}
-
-.navbar.scrolled {
   background-color: rgba(0, 0, 0, 0.95);
   padding: 0.8rem 0;
-}
-
-.navbar.navbar-shrink {
-  padding: 0.5rem 0;
-  transform: translateY(-2px);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+  transition: transform 0.3s ease;
 }
 
 .navbar-brand-wrapper {
@@ -113,6 +107,8 @@ main {
   min-height: 600px;
   position: relative;
   overflow: hidden;
+  padding-top: 76px;
+  margin-top: -76px;
 }
 
 .carousel-overlay {
@@ -122,6 +118,7 @@ main {
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
 }
 
 .carousel-content {
@@ -554,13 +551,15 @@ main {
   }
 
   .hero-section {
-    height: 25vh;
-    min-height: 180px;
+    height: 45vh;
+    min-height: 350px;
     margin-bottom: 0.2rem;
+    padding-top: 60px;
+    margin-top: -60px;
   }
 
   .carousel-content {
-    top: 50%;
+    top: 60%;
     padding: 0 8px;
   }
 
@@ -772,12 +771,19 @@ main {
   }
 
   .hero-section {
-    height: 20vh;
-    min-height: 150px;
+    height: 40vh;
+    min-height: 300px;
+    padding-top: 56px;
+    margin-top: -56px;
   }
 
   .carousel-content {
-    top: 48%;
+    top: 65%;
   }
+}
+
+/* Clase para ocultar el navbar */
+.navbar-hidden {
+  transform: translateY(-100%);
 }
 
