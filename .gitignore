@@ -4,6 +4,8 @@ Thumbs.db
 
 # Archivos de desarrollo
 node_modules/
+dist/
+.env
 .sass-cache/
 *.css.map
 
