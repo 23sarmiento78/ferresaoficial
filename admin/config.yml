@@ -6,6 +6,14 @@ media_folder: "public/fotos"
 public_folder: "/fotos"
 
 collections:
+  - name: "pages"
+    label: "Páginas"
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+
   - name: "productos"
     label: "Productos"
     folder: "content/productos"

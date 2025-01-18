@@ -2,6 +2,7 @@
   "name": "ferresa-oficial",
   "version": "1.0.0",
   "description": "Sitio web oficial de Ferre.Sa",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -14,6 +15,8 @@
     "sweetalert2": "^11.15.10"
   },
   "devDependencies": {
-    "vite": "^4.5.5"
+    "vite": "^4.5.5",
+    "@stackbit/cms-git": "^0.3.0",
+    "@stackbit/types": "^0.1.0"
   }
 }
