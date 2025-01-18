@@ -104,9 +104,9 @@
 
 <!-- Formulario -->
 <div class="contact-section" id="contacto">
-  <div class="container py-4">
+  <div class="container">
     <div class="row justify-content-center">
-      <div class="col-12">
+      <div class="col-lg-8 col-md-10">
         <div class="contact-header text-center mb-4" data-aos="fade-up">
           <h2 class="section-title text-white">Solicita tu Cotización</h2>
           <p class="section-subtitle text-light">Déjanos tus datos y nos pondremos en contacto contigo</p>
@@ -393,6 +393,32 @@
       }
     });
   }
+</script>
+
+<div class="water-drops"></div>
+
+<script>
+function createDrop() {
+  const drops = document.querySelector('.water-drops');
+  const drop = document.createElement('div');
+  drop.classList.add('drop');
+  
+  // Posición aleatoria en X
+  drop.style.left = Math.random() * 100 + '%';
+  // Duración aleatoria
+  const duration = Math.random() * 2 + 1;
+  drop.style.animation = `fall ${duration}s linear infinite`;
+  
+  drops.appendChild(drop);
+  
+  // Eliminar la gota después de la animación
+  setTimeout(() => {
+    drop.remove();
+  }, duration * 1000);
+}
+
+// Crear gotas periódicamente
+setInterval(createDrop, 100);
 </script>
 </body>
 </html>

@@ -37,4 +37,15 @@ collections:
       - {label: "Descripción", name: "description", widget: "text"}
       - {label: "Imagen", name: "image", widget: "image"}
       - {label: "Orden", name: "order", widget: "number"}
-      - {label: "Activo", name: "active", widget: "boolean", default: true} 
+      - {label: "Activo", name: "active", widget: "boolean", default: true}
+
+  - name: "contact"
+    label: "Contacto"
+    files:
+      - name: "contact_form"
+        label: "Formulario de Contacto"
+        file: "content/contact/form.json"
+        fields:
+          - {label: "Título", name: "title", widget: "string"}
+          - {label: "Subtítulo", name: "subtitle", widget: "string"}
+          - {label: "Botón", name: "button", widget: "string"} 
