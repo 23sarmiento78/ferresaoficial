@@ -451,49 +451,305 @@ main {
   margin: 0;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* Breakpoints Principales */
+/* Extra small devices (phones, 360px and down) */
+@media (max-width: 360px) {
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
   }
-  
+
+  .hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .navbar-brand .brand-text {
+    font-size: 1.5rem;
+  }
+
+  .navbar-brand .brand-subtitle {
+    font-size: 0.7rem;
+  }
+
+  .carousel-content {
+    padding: 0 15px;
+    top: 55%;
+  }
+}
+
+/* Small devices (large phones, 576px and down) */
+@media (max-width: 576px) {
+  .hero-section {
+    height: 80vh;
+    min-height: 500px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .navbar {
+    padding: 0.5rem 0;
+  }
+
   .contact-form-wrapper {
     padding: 1.5rem;
   }
-  
-  .footer-title::after {
-    left: 50%;
-    transform: translateX(-50%);
+
+  .custom-card-content {
+    padding: 1rem;
   }
-  
-  .footer-contact-list,
-  .footer-description,
-  .footer-address {
+
+  .footer-section {
+    padding: 40px 0 20px;
+  }
+}
+
+/* Medium devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+  .navbar-nav {
+    background: rgba(0, 0, 0, 0.95);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+  }
+
+  .nav-item {
+    margin: 0.5rem 0;
+  }
+
+  .contact-btn {
+    width: 100%;
     text-align: center;
-  }
-  
-  .footer-contact-list li,
-  .footer-address {
-    justify-content: center;
-  }
-  
-  .product-card {
-    margin-bottom: 30px;
+    margin-top: 0.5rem;
   }
 
   .custom-card-content {
     flex-direction: column;
-    padding: 1.5rem;
   }
 
   .custom-card-image {
     flex: 0 0 100%;
     max-width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
-  .custom-card-body {
-    padding: 0;
+  .product-card {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Large devices (small laptops, 992px and down) */
+@media (max-width: 992px) {
+  .hero-section {
+    height: 90vh;
+  }
+
+  .navbar-brand-wrapper {
+    padding: 0.3rem 0.8rem;
+  }
+
+  .footer-content .row > div {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Extra large devices (laptops and desktops, 1200px and down) */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+/* Ajustes específicos para dispositivos Apple */
+@media only screen 
+  and (device-width: 375px) 
+  and (device-height: 812px) 
+  and (-webkit-device-pixel-ratio: 3) { /* iPhone X/XS */
+  .hero-section {
+    height: 85vh;
+  }
+}
+
+@media only screen 
+  and (device-width: 414px) 
+  and (device-height: 896px) 
+  and (-webkit-device-pixel-ratio: 2) { /* iPhone XR */
+  .hero-section {
+    height: 82vh;
+  }
+}
+
+/* Ajustes para dispositivos Samsung */
+@media screen 
+  and (device-width: 360px) 
+  and (device-height: 640px) {
+  .hero-section {
+    height: 88vh;
+  }
+}
+
+/* Orientación Landscape */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-section {
+    height: 120vh;
+  }
+
+  .carousel-content {
+    top: 65%;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+}
+
+/* Ajustes para tablets específicas */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+  .custom-card-content {
+    flex-direction: row;
+  }
+
+  .custom-card-image {
+    flex: 0 0 45%;
+    max-width: 45%;
+  }
+}
+
+/* Ajustes para dispositivos con notch */
+@supports (padding-top: env(safe-area-inset-top)) {
+  .navbar {
+    padding-top: calc(1rem + env(safe-area-inset-top));
+  }
+}
+
+/* Ajustes para dispositivos con alto DPI */
+@media 
+  (-webkit-min-device-pixel-ratio: 2), 
+  (min-resolution: 192dpi) {
+  .hero-section img {
+    transform: scale(1.1);
+  }
+}
+
+/* Estilos del menú móvil */
+.navbar-toggler {
+  border: none;
+  padding: 0.5rem;
+  color: #fff;
+  background: transparent;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.navbar-toggler-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.navbar-toggler-icon i {
+  font-size: 2rem;
+  color: #fff;
+}
+
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: rgba(0, 0, 0, 0.95);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .navbar-nav {
+    gap: 0;
+  }
+
+  .nav-item {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .nav-link {
+    padding: 0.8rem 1rem;
+    width: 100%;
+    text-align: center;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+
+  .nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .contact-btn {
+    margin-top: 0.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  /* Animación del menú */
+  .navbar-collapse {
+    transform-origin: top;
+    animation: slideDown 0.3s ease forwards;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Ajustes para dispositivos muy pequeños */
+@media (max-width: 360px) {
+  .navbar-brand .brand-text {
+    font-size: 1.5rem;
+  }
+
+  .navbar-brand .brand-subtitle {
+    font-size: 0.7rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
   }
 }
 
