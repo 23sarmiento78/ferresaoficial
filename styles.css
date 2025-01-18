@@ -233,13 +233,23 @@ main {
 
 .custom-card-content {
   padding: 2rem;
+  display: flex;
+  align-items: start;
+  gap: 2rem;
 }
 
 .custom-card-image {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
-  margin-bottom: 2rem;
+  flex: 0 0 50%;
+  max-width: 50%;
+  margin-bottom: 0;
+}
+
+.custom-card-body {
+  flex: 1;
+  padding: 1rem 0;
 }
 
 .custom-card-image img {
@@ -469,6 +479,21 @@ main {
   
   .product-card {
     margin-bottom: 30px;
+  }
+
+  .custom-card-content {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .custom-card-image {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .custom-card-body {
+    padding: 0;
   }
 }
 
