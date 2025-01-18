@@ -104,10 +104,10 @@
 
 <!-- Formulario -->
 <div class="contact-section" id="contacto">
-  <div class="container py-5">
+  <div class="container py-4">
     <div class="row justify-content-center">
       <div class="col-12">
-        <div class="contact-header text-center mb-5" data-aos="fade-up">
+        <div class="contact-header text-center mb-4" data-aos="fade-up">
           <h2 class="section-title text-white">Solicita tu Cotización</h2>
           <p class="section-subtitle text-light">Déjanos tus datos y nos pondremos en contacto contigo</p>
         </div>
@@ -120,43 +120,41 @@
           <form action="https://formspree.io/f/xovvoele" method="POST" class="modern-form">
             <div class="row">
               <div class="col-md-6">
-                <div class="form-floating mb-4">
-                  <input type="text" class="form-control" id="name" name="name" placeholder="Nombre y Apellido" required>
-                  <label for="name"><i class="bi bi-person"></i> Nombre y Apellido</label>
+                <div class="form-group">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Nombre y Apellido" required>
+                    <label for="name"><i class="bi bi-person"></i> Nombre y Apellido</label>
+                  </div>
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="form-floating mb-4">
-                  <input type="tel" class="form-control" id="phone" name="phone" placeholder="Número de Teléfono" required>
-                  <label for="phone"><i class="bi bi-telephone"></i> Número de Teléfono</label>
+                <div class="form-group">
+                  <div class="form-floating">
+                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="Número de Teléfono" required>
+                    <label for="phone"><i class="bi bi-telephone"></i> Número de Teléfono</label>
+                  </div>
                 </div>
               </div>
             </div>
             
-            <div class="row">
-              <div class="col-12">
-                <div class="form-floating mb-4">
-                  <input type="email" class="form-control" id="email" name="email" placeholder="correo@ejemplo.com" required>
-                  <label for="email"><i class="bi bi-envelope"></i> Correo Electrónico</label>
-                </div>
+            <div class="form-group">
+              <div class="form-floating">
+                <input type="email" class="form-control" id="email" name="email" placeholder="correo@ejemplo.com" required>
+                <label for="email"><i class="bi bi-envelope"></i> Correo Electrónico</label>
               </div>
             </div>
             
-            <div class="row">
-              <div class="col-12">
-                <div class="form-floating mb-4">
-                  <textarea class="form-control custom-textarea" id="message" name="message" placeholder="Tu mensaje" style="height: 150px; resize: none;" required></textarea>
-                  <label for="message"><i class="bi bi-chat-text"></i> ¿En qué podemos ayudarte?</label>
-                </div>
+            <div class="form-group">
+              <div class="form-floating">
+                <textarea class="form-control custom-textarea" id="message" name="message" placeholder="Tu mensaje" required></textarea>
+                <label for="message"><i class="bi bi-chat-text"></i> ¿En qué podemos ayudarte?</label>
               </div>
             </div>
             
-            <div class="row">
-              <div class="col-12 text-center">
-                <button type="submit" class="btn btn-primary btn-lg submit-btn">
-                  Enviar Mensaje <i class="bi bi-send"></i>
-                </button>
-              </div>
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary btn-lg submit-btn">
+                Enviar Mensaje <i class="bi bi-send"></i>
+              </button>
             </div>
           </form>
         </div>

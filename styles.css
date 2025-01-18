@@ -163,50 +163,92 @@ main {
 
 /* Formulario de Contacto */
 .contact-section {
-  padding: 100px 0;
-  background-color: #000;
-  margin: 50px 0;
+  padding: 80px 0;
+  position: relative;
+}
+
+.contact-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
 }
 
 .contact-form-wrapper {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 3rem;
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(145deg, rgba(33, 37, 41, 0.98), rgba(33, 37, 41, 0.95));
+  padding: 3.5rem;
+  margin-top: 2rem;
 }
 
+/* Espaciado entre campos */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Mejoras en los campos */
 .form-control {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #fff;
-}
-
-.form-control:focus {
-  background-color: rgba(255, 255, 255, 0.15);
-  border-color: #0d6efd;
-  color: #fff;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
-}
-
-.form-floating label {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.form-floating > .form-control:focus ~ label,
-.form-floating > .form-control:not(:placeholder-shown) ~ label {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.submit-btn {
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
+  height: 65px;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
   transition: all 0.3s ease;
 }
 
-.submit-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(13, 110, 253, 0.4);
+.custom-textarea {
+  min-height: 180px !important;
+  line-height: 1.6;
+}
+
+/* Mejoras en las etiquetas */
+.form-floating > label {
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+  padding: 1rem 0.8rem;
+}
+
+/* Validación mejorada */
+.form-control:valid {
+  border-color: rgba(25, 135, 84, 0.7) !important;
+  box-shadow: 0 0 0 1px rgba(25, 135, 84, 0.2) !important;
+}
+
+.form-control:invalid:not(:placeholder-shown) {
+  border-color: rgba(220, 53, 69, 0.7) !important;
+  box-shadow: 0 0 0 1px rgba(220, 53, 69, 0.2) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-form-wrapper {
+    padding: 2rem;
+  }
+
+  .form-control {
+    height: 58px;
+    font-size: 1rem;
+  }
+
+  .custom-textarea {
+    min-height: 150px !important;
+  }
+
+  .form-floating > label {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-form-wrapper {
+    padding: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
 }
 
 /* Mapa */
