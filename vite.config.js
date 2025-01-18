@@ -6,7 +6,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: 'index.html',
-        productos: 'productos.html'
+        productos: 'productos.html',
+        admin: 'admin/index.html'
       }
     }
   },
