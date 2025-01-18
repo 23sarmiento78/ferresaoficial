@@ -1,0 +1,15 @@
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de desarrollo
+node_modules/
+.sass-cache/
+*.css.map
+
+# Archivos de IDE
+.vscode/
+.idea/
+
+# Archivos compilados
+/styles/*.css 

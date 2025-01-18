@@ -1,0 +1,22 @@
+// Variables globales
+$primary-color: #0d6efd;
+$dark-blue: #0a58ca;
+$black: #000;
+$white: #fff;
+
+// Gradientes
+$primary-gradient: linear-gradient(45deg, $primary-color, $dark-blue);
+
+// Transparencias
+$overlay-dark: rgba(0, 0, 0, 0.7);
+$overlay-light: rgba(255, 255, 255, 0.1);
+
+// Espaciados
+$section-padding: 100px;
+$card-padding: 3rem;
+
+// Transiciones
+$transition-default: all 0.3s ease;
+
+// Breakpoints
+$mobile: 768px; 

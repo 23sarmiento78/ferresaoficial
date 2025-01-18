@@ -1,0 +1,30 @@
+// Footer compartido
+.footer-section {
+  background-color: rgba($black, 0.95);
+  padding: 80px 0 30px;
+  color: $white;
+  margin-top: 80px;
+  border-top: 1px solid $overlay-light;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  
+  .brand-text {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $white;
+    letter-spacing: 1px;
+  }
+  
+  .brand-subtitle {
+    font-size: 0.9rem;
+    color: $primary-color;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}
+
+// ... resto de los estilos del footer 
