@@ -406,7 +406,7 @@ function createDrop() {
   // Posición aleatoria en X
   drop.style.left = Math.random() * 100 + '%';
   // Duración aleatoria
-  const duration = Math.random() * 2 + 1;
+  const duration = Math.random() * 3 + 2;
   drop.style.animation = `fall ${duration}s linear infinite`;
   
   drops.appendChild(drop);
@@ -418,7 +418,40 @@ function createDrop() {
 }
 
 // Crear gotas periódicamente
-setInterval(createDrop, 100);
+const dropInterval = window.matchMedia('(max-width: 768px)').matches ? 300 : 200;
+setInterval(createDrop, dropInterval);
+</script>
+
+<div class="bubble-container"></div>
+
+<script>
+function createBubble() {
+  const container = document.querySelector('.bubble-container');
+  const bubble = document.createElement('div');
+  bubble.classList.add('bubble');
+  
+  // Tamaño aleatorio
+  const size = Math.random() * 30 + 10;
+  bubble.style.width = `${size}px`;
+  bubble.style.height = `${size}px`;
+  
+  // Posición aleatoria en X
+  bubble.style.left = `${Math.random() * 100}%`;
+  
+  // Duración aleatoria
+  const duration = Math.random() * 4 + 6;
+  bubble.style.animation = `float ${duration}s ease-in-out infinite`;
+  
+  container.appendChild(bubble);
+  
+  // Eliminar la burbuja después de la animación
+  setTimeout(() => {
+    bubble.remove();
+  }, duration * 1000);
+}
+
+// Crear burbujas periódicamente
+setInterval(createBubble, 1000);
 </script>
 </body>
 </html>
