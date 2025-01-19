@@ -2,7 +2,7 @@
 body { 
   background: #000; 
   margin: 20px;
-}
+      }
 
 main {
   background-color: #000;
@@ -190,7 +190,7 @@ main {
 
 .contact-section::before {
   content: '';
-  position: absolute;
+   position: absolute; 
   top: 0;
   left: 0;
   right: 0;
@@ -524,7 +524,7 @@ main {
   }
 
   .hero-subtitle {
-    font-size: 1rem;
+  font-size: 1rem;
     margin-bottom: 1.5rem;
   }
 
